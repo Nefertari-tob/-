@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/upload/upload",
+    "pages/index/index",
+    "pages/photoprompt/photoprompt",
+    "pages/wait/wait"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "人脸采集",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

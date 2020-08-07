@@ -1,0 +1,190 @@
+.container{
+  background-color: #E1F2FF;
+}
+.head{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  margin: 30rpx;
+}
+.icon-a{
+  height: 30px;
+  width: 38px;
+  margin: 0 9pt 0 0;
+}
+.title{
+  height: 22px;
+  width: 208px;
+  font-size: 16px;
+  color: #128AD4;
+  font-family: PingFang SC;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+}
+.index{
+  width: 600rpx;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  border-radius: 15px;
+}
+.choose{
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+.camera {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.point{
+  width: 100%;
+  height: 25%;
+  background-color: rgba(225, 242, 255, 0.603);
+  border-radius: 15px;
+}
+
+.modal-mask {
+  width: 610rpx;
+  height: 80%;
+  position: fixed;
+  top: 125rpx;
+  left: 70rpx;
+  background:white;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+  border-radius: 15px;
+}
+.modal-dialog {
+  width:600rpx;
+  height: 30%;
+  overflow: hidden;
+  position: fixed;
+  top: 85%;
+  left: 0;
+  z-index: 9999;
+  margin: -170rpx 76rpx;
+  border-radius: 36rpx;
+}
+.modal-dialog1 {
+  width:600rpx;
+  height: 50%;
+  overflow: hidden;
+  position: fixed;
+  top: 45%;
+  left: 0;
+  z-index: 9999;
+  margin: -170rpx 76rpx;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-title {
+  padding-top: 20rpx;
+  text-align: center;
+  color: #F75656;
+  font-family: PingFang SC;
+  font-size: 14px;
+}
+.modal-title1 {
+  padding-top: 50rpx;
+  text-align: center;
+  color: #333333;
+  font-family: PingFang SC;
+  font-size: 16px;
+}
+.modal-title2 {
+  padding: 15rpx;
+  text-align: center;
+  color: #128AD4;
+  font-family: PingFang SC;
+  font-size: 16px;
+}
+.icon-b{
+  width: 46px;
+  height: 46px;
+}
+.modal-title3 {
+  padding-top: 20rpx;
+  text-align: center;
+  color: #128AD4;
+  font-family: PingFang SC;
+  font-size: 16px;
+}
+.modal-footer0 {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  font-size: 34rpx;
+  line-height: 86rpx;
+  justify-content: space-around;
+  padding-top: 40rpx;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  font-size: 34rpx;
+  line-height: 86rpx;
+  justify-content: space-around;
+  padding-top: 20rpx;
+}
+.modal-footer1 {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  font-size: 34rpx;
+  width: 100%;
+  line-height: 86rpx;
+  justify-content: space-around;
+  padding-top: 150rpx;
+}
+.btn-cancel {
+  font-family: PingFang SC;
+  font-size: 12px;
+  color: #128AD4;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  height:23px;
+  line-height: 23px;
+}
+.btn-confirm {
+  font-family: PingFang SC;
+  font-size: 12px;
+  color: white;
+  background-color: #128AD4;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  height:23px;
+  line-height: 23px;
+}
+.btn-confirm1 {
+  font-family: PingFang SC;
+  font-size: 12px;
+  color: white;
+  background-color: #128AD4;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  height:23px;
+  line-height: 23px;
+}

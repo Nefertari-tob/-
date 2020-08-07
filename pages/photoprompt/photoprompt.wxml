@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="above">
+    <view class="head">
+      <view class="body">
+        <view>
+          <image class="icon-a" src="/images/1.png"></image>
+        </view>
+        <view class="title">
+          <text>江苏云向量智能科技有限公司</text>
+        </view>
+      </view>
+
+      <view class="index">
+        <view class="top">
+          <view class="text-a">底照上传</view>
+        </view>
+        <view class="indexed">
+          <view class="choose">
+            <view class='picture' >
+              <button  bindtap="chooseimage" class="but" style="width:100px;height:152px;plain:true;">
+                <form bindsubmit="uploadImg" ><image src="{{photo}}"   mode="aspectFill" class="img"  /></form> 
+              </button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> 
+  <view class="version">
+    <view class="one">
+      <view class="text-b">操作提示</view>
+    </view>
+    <view class="two">
+      <view class="text-c">
+        <view>1.该照片将用于人脸识别底裤照片，请上传近六个月内未修图的正面无遮挡人脸照片；</view>
+        <view>2.照片分辨率不低于200，照片体积在100k-5M之间，照片尺寸无拉伸；</view>
+        <view>3.侧脸、低头、抬头角度不超过15度；</view>
+        <view>4.不要带帽子，墨镜、口罩、面具、围巾、高领衣服，脸部不要遮挡；</view>
+        <view>5.照片背景尽量为纯色；</view>
+        <view>6.脸部清晰，避免面部过亮或者过暗；</view>
+      </view>
+    </view>
+    <view class="three">
+      <view class="button">
+        <button class="button-a" bindtap="accessdenied" style='width:100px;height:23px;'>返回</button>
+        <button class="button-b" bindtap="agreetovisit" form-type="submit" style='width:100px;height:23px;'>下一步</button>
+      </view>
+    </view>
+  </view>
+</view>
