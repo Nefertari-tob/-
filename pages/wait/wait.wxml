@@ -2,10 +2,10 @@
   <view class="head">
     <view class="body">
       <view>
-        <image class="icon-a" src="/images/1.png"></image>
+        <!-- <image class="icon-a" src="/images/1.png"></image> -->
       </view>
       <view class="title">
-        <text>江苏云向量智能科技有限公司</text>
+        <!-- <text>江苏云向量智能科技有限公司</text> -->
       </view>
     </view>   
     <view class="index">
@@ -13,18 +13,10 @@
         <camera class="camera" bindtap="camera" device-position="front" flash="off" binderror="error" bindstop='bindstop' binderror='binderror'></camera>
       </view>
       <view class="point">
-        <view class="modal-dialog" wx:if="{{showModal1}}">
-          <view class="modal-title">识别失败</view>
-          <view class="modal-title">前置摄像头未检测到人脸</view>
-          <view class="modal-footer0">
-            <view class="btn-cancel" bindtap="onCancel1" data-status="cancel">重新上传底照</view>
-            <view class="btn-confirm" bindtap="onConfirm1" data-status="confirm">重新识别</view>
-          </view>
-        </view>
 
         <view class="modal-dialog" wx:if="{{showModal2}}">
           <view class="modal-title">识别失败</view>
-          <view class="modal-title">人脸未比对通过</view>
+          <view class="modal-title">{{msg}}</view>
           <view class="modal-footer0">
             <view class="btn-cancel" bindtap="onCancel1" data-status="cancel">重新上传底照</view>
             <view class="btn-confirm" bindtap="onConfirm1" data-status="confirm">重新识别</view>
@@ -33,7 +25,7 @@
 
         <view class="modal-dialog" wx:if="{{showModal3}}">
           <view class="modal-title1"></view>
-          <view class="modal-title1">正在识别 请耐心等代</view>
+          <view class="modal-title1">正在识别 请耐心等待</view>
         </view>
 
         <view class="modal-dialog" wx:if="{{showModal4}}">
@@ -45,16 +37,6 @@
             <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">提交</view>
           </view>
         </view>
-        
-        <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal5}}"></view>
-          <view class="modal-dialog1" wx:if="{{showModal5}}">
-            <view><image class="icon-b" src='/images/2.png'></image></view>
-            <view class="modal-title3">提交成功</view>
-            <view class="modal-title3">您的人脸以采集成功</view>
-            <view class="modal-footer1">
-              <view class="btn-confirm1" bindtap="onConfirm" data-status="confirm">结束</view>
-            </view>
-          </view>
 
       </view>
     </view>

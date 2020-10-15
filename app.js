@@ -36,6 +36,6 @@ App({
     userInfo: null,
     systemObj:null,
     systemval:null,
-
+    systemcode:null,
   }
 })

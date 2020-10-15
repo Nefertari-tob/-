@@ -40,21 +40,24 @@
   height: 16px;
   margin-right: 100rpx;
 }
-.loginTab{
-  margin: 0 0 9px 23px;
-}
-.loginLab{
+.loginLab-name{
   font-size: 24rpx;
   color: #333333;
   font-family: PingFang SC;
-  margin: 10px 0 9px 34px;
+  margin: 10px 0 9px 15px;
+}
+.loginLab-id{
+  font-size: 24rpx;
+  color: #333333;
+  font-family: PingFang SC;
+  margin: 10px 0 9px 15px;
 }
 .picker{
-  width: 320rpx;
+  width: 360rpx;
   font-size: 24rpx;
   color: #333333;
   font-family: PingFang SC;
-  margin: 10px 0 9px 34px;
+  margin: 10px 0 9px 15px;
 }
 .name{
   height:36px; 
@@ -72,16 +75,16 @@
   color: #333333;
   font-family: PingFang SC;
   height: 28px;
-  width: 250rpx;
-  margin-left: 70rpx;
+  width: 280rpx;
+  margin-left: 60rpx;
 }
 .id-Text{
   font-size: 24rpx;
   color: #333333;
   font-family: PingFang SC;
   height: 28px;
-  width: 250rpx;
-  margin-left: 25rpx;
+  width: 280rpx;
+  margin-left: 15rpx;
 }
 .id{
   height:36px; 
@@ -105,6 +108,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.button-a:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .last-text{
   height: 20%;

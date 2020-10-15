@@ -1,0 +1,73 @@
+.container{
+  background-color: #E1F2FF;
+}
+.head{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  margin: 30rpx;
+}
+.icon-a{
+  height: 30px;
+  width: 38px;
+  margin: 0 9pt 0 0;
+}
+.title{
+  height: 22px;
+  width: 208px;
+  font-size: 16px;
+  color: #128AD4;
+  font-family: PingFang SC;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+}
+.index{
+  width: 600rpx;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  border-radius: 15px;
+}
+.modal-title{
+  padding-top: 20rpx;
+  text-align: center;
+  color: #128AD4;
+  font-family: PingFang SC;
+  font-size: 16px;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  font-size: 34rpx;
+  width: 100%;
+  line-height: 86rpx;
+  justify-content: space-around;
+  padding-top: 150rpx;
+}
+.btn-confirm {
+  font-family: PingFang SC;
+  font-size: 12px;
+  color: white;
+  background-color: #128AD4;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  height:23px;
+  line-height: 23px;
+}
+.btn-confirm:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}

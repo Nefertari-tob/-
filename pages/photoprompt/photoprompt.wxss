@@ -57,7 +57,7 @@
 }
 .indexed{
   width: 100%;
-  height: 500rpx;
+  height: 490rpx;
   display: flex;
   align-items:center;
   justify-content:center;
@@ -69,21 +69,38 @@
 .picture{
     height: 152px;
     width:100px;
-    border: 1rpx black dashed;
-    margin: 0rpx  auto;
+    margin: 0rpx  auto; 
+    font-size: 12px; 
+    display: flex;
+    text-align: center;
+    align-items: flex-end; 
+    position: relative;
+}
+.img-text{
+  width: 100%;
+  font-size: 12px;
+  font-family: PingFang SC;
+  opacity: 0.3;
+  position: absolute;
+  text-align: center;
 }
 .but{
   padding:0%;
-  border:none;
-  background-color: white;
+ 
+  border-style: dashed;
+}
+.inp{
+  width: 100%;
+  height: 100%;
 }
 .img {
   width: 100%;
   height: 100%;
 }
+
 .version{
   width: 100%;
-  height: 45%;
+  height: 50%;
   z-index: 2;
   background-color: #FFFFFFFF;
   border-radius: 14px 14px 0 0;
@@ -110,7 +127,7 @@
   height: 70%;
   display: flex;
   justify-content: center;
-  margin: 30rpx 0 30rpx 0;
+  margin: 25rpx 0 25rpx 0;
 }
 .text-c{
   width: 80%;
@@ -137,6 +154,10 @@
   background-color: #128AD4;
   border-radius: 8px;
 }
+.button-a:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
 .button-b{
   line-height: 6px;
   font-family: PingFang SC;
@@ -144,4 +165,8 @@
   color: white;
   background-color: #128AD4;
   border-radius: 8px;
+}
+.button-b:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }

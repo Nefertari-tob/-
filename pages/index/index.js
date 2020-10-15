@@ -18,7 +18,7 @@ Page({
     
    var that=this;
       wx.request({
-        url: 'http://192.168.1.121:8800/system/list',
+        url: 'https://wx.kamtewog.com/fapi/system/list',
 
         method:"GET",
         header:{
@@ -27,7 +27,7 @@ Page({
         success(res) {
           console.log(res.data);
           that.setData({array:res.data.data}); 
-         
+
         },
         
       })
@@ -65,7 +65,7 @@ Page({
       idCard: idCard,
       systemId: this.data.systemId,
     };
-    var url ="http://192.168.1.121:8800/information/login";
+    var url ="https://wx.kamtewog.com/fapi/information/login";
     wx.request({
       url: url,
       method:'POST',
@@ -74,31 +74,50 @@ Page({
         'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
       },
       success(res){
-        console.log(res.data);
-        app.globalData.systemObj = res.data.data.id;
-        app.globalData.systemval = res.data.data.validated;
-        var val = app.globalData.systemval
-        if(val==true){
+        if(res.data.code==100){
           wx.showModal({
-            title: '您的信息已经采集成功',
-            content: '是否重新采集',
+            title: res.data.msg,
+            content: '请重新输入',
             success(res) {
               if (res.confirm) {
                 console.log('用户点击确定')
-                wx.navigateTo({
-                  url: '../photoprompt/photoprompt'
-                })
               } else if (res.cancel) {
                 console.log('用户点击取消')
+                wx.navigateTo({
+                  url: '../upload/upload'
+                })
               }
             }
           })
-        }else {
-          wx.navigateTo({
-            url: '../photoprompt/photoprompt'
-          })
-        }
-        
+        }else{
+          console.log(res.data);
+          app.globalData.systemObj = res.data.data.id;
+          app.globalData.systemval = res.data.data.validated;
+          var val = app.globalData.systemval
+          if (val == true) {
+            wx.showModal({
+              title: '您的信息已经采集成功',
+              content: '是否重新采集',
+              success(res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                  wx.navigateTo({
+                    url: '../photoprompt/photoprompt'
+                  })
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                  wx.navigateTo({
+                    url: '../index/index'
+                  })
+                }
+              }
+            })
+          } else {
+            wx.navigateTo({
+              url: '../photoprompt/photoprompt'
+            })
+          }
+        } 
       }
     })
   }

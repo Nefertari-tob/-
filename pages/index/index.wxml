@@ -5,16 +5,16 @@
         <view class="section__title"></view>
           <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
             <view class="picker">
-                系统选择 ：    {{array[index].name}}
+                系统选择 : {{array[index].name}}
             </view>
           </picker>
       </view>
       <view class="name">
-        <label class="loginLab">姓名</label>
+        <label class="loginLab-name" >姓名 :</label>
         <input phone class="name-Text" placeholder="" bindinput="nameInput" />
       </view>
       <view class="id">
-        <label class="loginLab" >身份证号</label> 
+        <label class="loginLab-id" >身份证号 :</label> 
         <input phone class="id-Text" placeholder="" bindinput="idInput" /> 
       </view>
       <button class="button-a" bindtap="accessdenied" style="width:560rpx;height:50px;">进入系统</button>

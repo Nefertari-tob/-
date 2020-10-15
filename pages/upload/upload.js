@@ -33,7 +33,9 @@ Page({
       var that = this;
       console.log("用户的信息如下：");
       console.log(e.detail.userInfo);
-
+      wx.navigateTo({
+        url: '../index/index',
+      })
       that.setData({
         isHide:false
       });
@@ -54,16 +56,9 @@ Page({
   },
 
     accessdenied: function () {
-      wx.navigateTo({
-        url: '.././.'
-      })
+      
     },
-    agreetovisit: function () {
-      wx.navigateTo({
-        url: '../index/index',
-      })
-    },
-
+   
 
 })
 

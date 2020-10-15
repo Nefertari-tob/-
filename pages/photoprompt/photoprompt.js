@@ -4,12 +4,11 @@ Page({
     photo:""
   },
   onLoad() {
-
     console.log(app)
   },
 
   accessdenied: function() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../index/index'
     })
   },
@@ -27,18 +26,22 @@ Page({
         })
         const id = app.globalData.systemObj
         wx.uploadFile({
-          url: `http://192.168.1.121:8800/information/${id}/upload`,
+          url: `https://wx.kamtewog.com/fapi/information/${id}/upload`,
           filePath: path,
           method: 'POST',
           name: 'photo',
           success: function (res) {
             var data = JSON.parse(res.data)
+            app.globalData.systemcode = data.code;
+            var co = app.globalData.systemcode
+            console.log(co)
+            
             console.log(data)
             if(data.code==0){
               wx.showToast({
-                title: '图片上传成功',
+                title: '图片上传成功 请进行下一步',
                 icon: 'none',
-                duration: 20000
+                duration: 2000
               })
 
             }else{
@@ -48,8 +51,8 @@ Page({
                 success(res) {
                   if (res.confirm) {
                     console.log('用户点击确定')
-                    wx.navigateTo({
-                      url: '../photoprompt/photoprompt'
+                    that.setData({
+                      photo: '',
                     })
                   } else if (res.cancel) {
                     console.log('用户点击取消')
@@ -66,8 +69,26 @@ Page({
     })
   },
   agreetovisit: function() {
-        wx.navigateTo({
-          url: '../wait/wait'
-        })
+    const co = app.globalData.systemcode
+    console.log(co)
+    if(co==0){
+      wx.navigateTo({
+        url: '../wait/wait'
+      })
+    }else if(co==-1){
+      wx.showToast({
+        title: '请上传合格的照片',
+        icon: 'none',
+        duration: 2000   
+      })
+    }
+    else{
+      wx.showToast({
+        title: '请上传照片',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+        
       }
 })

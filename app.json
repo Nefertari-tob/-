@@ -1,9 +1,11 @@
 {
   "pages":[
+    
     "pages/upload/upload",
     "pages/index/index",
     "pages/photoprompt/photoprompt",
-    "pages/wait/wait"
+    "pages/wait/wait",
+    "pages/end/end"
   ],
   "window":{
     "backgroundTextStyle":"light",
